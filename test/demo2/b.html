@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            function danceToAdd() {
+                document.getElementById('addHref').click();
+            }
+            
+            function danceToUpdate() {
+                document.getElementById('updateHref').click();
+            }
+        </script>
+    </head>
+    <body>
+        <a id="addHref" href="add.html" target="main">添加用户</a>
+        <br>
+        <a id="updateHref" href="update.html" target="main" style="display: block; margin-top: 10px;">修改用户</a>
+        <br>
+        <button onclick="danceToAdd()" style="margin-top: 10px;">添加用户</button>
+        <br>
+        <button onclick="danceToUpdate()" style="margin-top: 10px;">修改用户</button>
+    </body>
+</html>
