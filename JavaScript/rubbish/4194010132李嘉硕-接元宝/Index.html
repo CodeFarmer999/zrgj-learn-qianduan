@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>接元宝</title>
+		<style>
+			.cc{
+				height: 28px;
+				width: 40px;
+				background-image: url(img/ingot.png);
+			}
+			.info{
+				position: absolute;
+				left: 650px;
+				width: 120px;
+				height: 20px;
+				line-height: 20px;
+				border: 1px solid #ff0000;
+				background-color: #ffffcc;
+				font-size: 9pt;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<input type=button id="flag"  value="开始/结束" >
+		<div id="back" style="background: url(img/back.jpg); position: absolute;left: 0px; top:50px;border: 1px solid #000; width: 800px; height: 600px"></div>
+		<div class="info" style="top:110px">游戏方法：<br>左右键控制方向</div>
+		<div id="show_life" class="info" style="top:175px">生命值</div>
+		<div id="show_score" class="info" style="top:215px">得分数</div>
+		<div id="div_character" style="background: url(img/character.png);position: absolute; left: 300px; top: 550px;width: 184px; height: 100px"></div>
+		</body>
+		<script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+		<script language="JavaScript">
+		$(function() {
+				game_start = false;
+				var game_life = 0;
+				var game_score = 0;
+				var loop_state;
+				var div_down;
+			
+			$(document).keydown(function(event)
+			{
+			var obj =$('#div_character');
+			var position_x=obj.offset().left;
+			if(game_start==true){
+				if(event.keyCode==37 && position_x>15){
+					obj.css({'left':position_x-30});
+				}
+				if(event.keyCode==39 && position_x<606){
+					obj.css({'left':position_x+30});
+				}
+			}
+		});
+		function create_ingot(){
+			$("body").append('<div></div>');
+			var temp=$("body div").last();
+			temp.addClass("cc");
+			var temp_x=Math.floor(Math.random()*750);
+			temp.css({'position':'absolute','left':temp_x,'top':40});
+			temp.attr("level",Math.floor(Math.random()*4));
+		}
+		function go_down() {
+				var x1, y1;
+				x1 = $("#div_character").offset().left;
+				y1 = 550;
+				$(".cc").each(function() {
+					var x2 = $(this).offset().left;
+					var y2 = $(this).offset().top;
+					var level = $(this).attr("level");
+					$(this).css({
+						'top': y2 + level * 4
+					});
+					if ($(this).offset().top >= 534) {
+						if (check_box(x1, y1, 184, 100, x2, y2, 40, 28)) {
+							game_score = game_score + (parseInt(level) + 1) * 50;
+							$("#show_score").html("得分数：" + game_score);
+						} else {
+							game_life--;
+							$("#show_life").html("生命数:" + game_life);
+							if (game_life == 0) game_over();
+						}
+						$(this).remove();
+					}
+				});
+			}
+		
+		
+		
+		$("#flag").click(function() {
+				if (game_start == true) {
+					game_over();
+				} else {
+					game_start = true;
+					game_life = 3;
+					game_score = 0;
+					$("#shoe_life").html("生命数:" + game_life);
+					$("#shoe_score").html("得分数:" + game_score);
+					create_ingot();
+					loop_state = setInterval(function() {
+						create_ingot()
+					}, 1500);
+					div_down = setInterval(function() {
+						go_down()
+					}, 50);
+				}
+			});
+
+			function game_over() {
+				game_start = false;
+				$(".cc").remove();
+				clearInterval(loop_state);
+				clearInterval(div_down);
+				clearInterval(game_score);
+				game_life=3;
+				alert("你挂了！\n你得了" + game_score + "分！");
+			}
+		})
+			
+
+			function check_box(x_1, y_1, w_1, h_1, x_2, y_2, w_2, h_2) {
+				if (Math.abs(x_1 - x_2 + w_1 / 2 - w_2 / 2) <= w_1 / 2 + w_2 / 2 && Math.abs(y_1 - y_2 + h_1 / 2 - h_2 / 2) <= h_1 / 2 + h_2 / 2) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+		</script>
+	
+</html>

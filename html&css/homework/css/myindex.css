@@ -1,0 +1,166 @@
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.all {
+  background-color: gainsboro;
+  margin: 0 auto;
+  width: 1090px;
+}
+.top-right-bar {
+  float: right;
+  height: 30px;
+  width: 650px;
+  background-color: darksalmon;
+  border-radius: 15px;
+  margin-right: 75px;
+}
+.top-left-image {
+  float: left;
+}
+.top-right-nav {
+  float: right;
+  width: 730px;
+  height: 20px;
+  margin: 20px auto;
+}
+.top-right-nav li {
+  float: left;
+  font-size: 15px;
+  line-height: 20px;
+}
+.top-right-nav a {
+  display: block;
+  text-decoration: none;
+  color: #4c4c4c;
+  padding: 0 40px;
+}
+.top-right-nav a:hover {
+  background-color: tomato;
+  color: yellow;
+}
+.middle {
+  /* margin-left: 50px; */
+  width: 100%;
+}
+.middle-main-img-wrapper {
+  position: relative;
+  width: 942px;
+  margin: 0 auto;
+}
+.middle-a {
+  display: block;
+  width: 190px;
+  height: 26px;
+  position: absolute;
+  bottom: 24px;
+  left: 145px;
+}
+.middle-down {
+  width: 100%;
+}
+.middle .middle-main-img img {
+  margin-top: 15px;
+  margin-left: 74px;
+}
+.middle-main-bottom-left {
+  margin-top: 16px;
+  margin-left: 96px;
+}
+.middle-main-bottom-left .pic1 {
+  margin-top: 10px;
+}
+.middle-main-bottom-left p {
+  width: 270px;
+  margin-top: 10px;
+}
+.middle-main-bottom-left a {
+  display: block;
+  margin-top: 30px;
+}
+.middle-main-bottom-left a::content {
+  color: lightblue;
+}
+.middle-main-bottom-left a:hover {
+  color: indianred;
+}
+.middle-main-bottom-left {
+  float: left;
+}
+.middle-main-bottom-middle {
+    margin-top: 16px;
+    margin-left: 50px;
+  }
+  .middle-main-bottom-middle .pic2 {
+    margin-top: 10px;
+  }
+  .middle-main-bottom-middle p {
+    width: 270px;
+    margin-top: 10px;
+  }
+  .middle-main-bottom-middle a {
+    display: block;
+    margin-top: 40px;
+  }
+  .middle-main-bottom-middle a::content {
+    color: lightblue;
+  }
+  .middle-main-bottom-middle a:hover {
+    color: indianred;
+  }
+  .middle-main-bottom-middle {
+    float: left;
+  }
+  .middle-main-bottom-right {
+    margin-top: 16px;
+    margin-left: 50px;
+  }
+  .middle-main-bottom-right .pic3 {
+    margin-top: 10px;
+  }
+  .middle-main-bottom-right p {
+    width: 270px;
+    margin-top: 10px;
+  }
+  .middle-main-bottom-right a {
+    display: block;
+    margin-top: 40px;
+  }
+  .middle-main-bottom-right a::content {
+    color: lightblue;
+  }
+  .middle-main-bottom-right a:hover {
+    color: indianred;
+  }
+  .middle-main-bottom-right {
+    float: left;
+  }
+ .middle-down .bot3{
+     margin-left: 74px;
+     margin-top: 25px;
+ }
+ .bottom-on-bar li{
+     float: left;
+ }
+ .bottom-on-bar a{
+     margin: 40px;
+ }
+ .bottom-on-bar a:hover{
+     background-color:teal;
+     color:tomato;
+ }
+ .bottom-on-bar .first{
+     margin-left: 100px;
+ }
+ .bottom-on-bar{
+     margin-top: 30px;
+     background-color:peachpuff;
+     margin-left: 70px;
+     margin-right: 70px;
+ }
+ .bottom-copyright .copyright{
+     margin-left: 420px;
+     margin-top: 20px;
+ }

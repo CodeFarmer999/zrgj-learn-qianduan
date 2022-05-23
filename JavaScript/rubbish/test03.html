@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #code{
+            width: 100px;
+            height: 50px;
+            background-color: tomato;
+            font-size: 44px;
+            letter-spacing: 5px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function createRndCode(){
+            // 验证码字符   
+            var chars = ['a','b','c','1','2','3']
+            var randCode = ""
+            for(var i = 0;i < 3;i++){
+                var random = Math.floor(Math.random() * (chars.length - 1))
+                randCode += chars[random]
+            }
+            var code = document.getElementById("code")
+            code.innerHTML = randCode
+        }
+    </script>
+    <div id="code"></div>
+    <button onclick="createRndCode()">验证码</button>
+</body>
+</html>

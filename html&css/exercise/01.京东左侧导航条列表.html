@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东左侧导航条列表</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .item a{
+            font-size: 14px;
+            /* 去除下划线 */
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            color: tomato;
+            font-style: 50px;
+        }
+        a:active{
+            color: green;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        li{
+            margin-bottom: 5px;
+            padding-left: 10px;
+        }
+        .item:hover{
+            background-color: burlywood;
+        }
+        .item span{
+            margin: 2px;
+        }
+        body{
+            background-color: #bfa;
+            /* color: #666; */
+        }
+        .list-nav-wrapper{
+            width: 190px;
+            height: 360px;
+            padding: 10px 0;
+            background-color: #fff;
+            margin: 30px auto;
+        }
+        .list-nav-wrapper .item{
+            height: 15px;
+            /* 要让一个文字在父元素中垂直居中，只需将父元素的line-height设置为一个和父元素height一样的高度 */
+            line-height: 15px;
+        }
+    </style>
+</head> 
+<body>
+    <div class="list-nav-wrapper">
+        <ul>
+            <li class="item"><a href="https://jiadian.jd.com/">家用电器</a></li>
+            <li class="item"> <a href="https://shouji.jd.com/">手机</a><span>/</span><a href="https://wt.jd.com/">运营商</a><span>/</span><a href="https://shuma.jd.com/">数码</a></li>
+            <li class="item"> <a href="https://diannao.jd.com/">电脑</a><span>/</span><a href="https://bg.jd.com/">办公</a></li>
+            <li class="item"> <a href="https://channel.jd.com/home.html">家居</a><span>/</span><a href="https://channel.jd.com/furniture.html">家具</a><span>/</span><a href="https://jzjc.jd.com/">家装</a><span>/</span><a href="https://channel.jd.com/kitchenware.html">厨具</a></li>
+            <li class="item"> <a href="https://phat.jd.com/10-603.html">男装</a><span>/</span><a href="https://phat.jd.com/10-507.html">女装</a><span>/</span><a href="https://phat.jd.com/10-156.html">童装</a><span>/</span><a href="https://channel.jd.com/underwear.html">内衣</a></li>
+            <li class="item"> <a href="https://beauty.jd.com/">美妆</a><span>/</span><a href="https://channel.jd.com/beauty.html">个人清洁</a><span>/</span><a href="https://channel.jd.com/pet.html">宠物</a></li>
+            <li class="item"> <a href="https://phat.jd.com/10-184.html">女鞋</a><span>/</span><a href="https://phat.jd.com/10-183.html">箱包</a><span>/</span><a href="https://channel.jd.com/watch.html">钟表</a><span>/</span><a href="https://channel.jd.com/jewellery.html">珠宝</a></li>
+            <li class="item"> <a href="https://phat.jd.com/10-185.html">男鞋</a><span>/</span><a href="https://phat.jd.com/10-109.html">运动</a><span>/</span><a href="https://phat.jd.com/10-272.html">户外</a></li>
+            <li class="item"> <a href="https://xinfang.jd.com/">房产</a><span>/</span><a href="https://car.jd.com/">汽车</a><span>/</span><a href="https://che.jd.com/">汽车用品</a></li>
+            <li class="item"> <a href="https://baby.jd.com/">母婴</a><span>/</span><a href="https://toy.jd.com/">玩具乐器</a></li>
+            <li class="item"> <a href="https://food.jd.com/">食品</a><span>/</span><a href="https://jiu.jd.com/">酒类</a><span>/</span><a href="https://fresh.jd.com/">生鲜</a><span>/</span><a href="https://china.jd.com/">特产</a></li>
+            <li class="item"> <a href="https://art.jd.com/">艺术</a><span>/</span><a href="https://channel.jd.com/1672-2599.html">礼品鲜花</a><span>/</span><a href="https://nong.jd.com/">农资绿植</a></li>
+            <li class="item"> <a href="https://health.jd.com/">医药保健</a><span>/</span><a href="https://channel.jd.com/9192-9196.html">计生情趣</a></li>
+            <li class="item"> <a href="https://book.jd.com/">图书</a><span>/</span><a href="https://mvd.jd.com/">文娱</a><span>/</span><a href="https://education.jd.com/">教育</a><span>/</span><a href="https://e.jd.com/">电子书</a></li>
+            <li class="item"> <a href="https://jipiao.jd.com/">机票</a><span>/</span><a href="https://hotel.jd.com/">酒店</a><span>/</span><a href="https://trip.jd.com/">旅游</a><span>/</span><a href="https://pro.jd.com/mall/active/3U1dkDb9bagM7FwUhScBL4rKva5R/index.html">生活</a></li>
+            <li class="item"> <a href="https://www.jdt.com.cn/finance/">理财</a><span>/</span><a href="https://pro.jd.com/mall/active/4EYjXQ6xjnM9TgeSjuMRE8ACEk6q/index.html">众筹</a><span>/</span><a href="https://www.jdt.com.cn/finance/">白条</a><span>/</span><a href="#https://www.jdt.com.cn/finance/">保险</a></li>
+            <li class="item"> <a href="https://anzhuang.jd.com/">安装</a><span>/</span><a href="https://jdwx.jd.com/">维修</a><span>/</span><a href="https://cleanclean.jd.com/">清洗</a><span>/</span><a href="https://2.jd.com/">二手</a></li>
+            <li class="item"> <a href="https://mro.jd.com/">工业品</a></li>
+        </ul>
+    </div>
+</body>
+</html>

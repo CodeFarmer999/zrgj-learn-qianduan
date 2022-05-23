@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            background-image: url(img/02/13/trump_run.png);
+            animation: first-line .3s steps(6) infinite;
+        }
+        @keyframes first-line{
+            from{
+                background-position: 0 0;
+            }
+            to{
+                background-position: -600px 0;
+            }
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            background-image: url(img/02/13/trump_run.png);
+            animation: second-line .3s steps(6) infinite;
+        }
+        @keyframes second-line{
+            from{
+                background-position: 0 -100px;
+            }
+            to{
+                background-position: -600px -100px;
+            }
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            background-image: url(img/02/13/trump_run.png);
+            animation: third-line .3s steps(6) infinite;
+        }
+        @keyframes third-line{
+            from{
+                background-position: 0 -200px;
+            }
+            to{
+                background-position: -600px -200px;
+            }
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            background-image: url(img/02/13/trump_run.png);
+            animation: forth-line .3s steps(6) infinite;
+        }
+        @keyframes forth-line{
+            from{
+                background-position: 0 -300px;
+            }
+            to{
+                background-position: -600px -300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+</body>
+</html>

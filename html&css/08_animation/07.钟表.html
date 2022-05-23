@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* .sec-wrapper{
+            width: 500px;
+            height: 500px;
+            /* background-color: #bfa; */
+        /* animation: run 60s; 
+        }
+        .sec{
+            height: 250px;
+            width: 4px;
+            background-color: red;
+            margin: 0 auto;
+            /* animation: run 60s; */
+        /* } */
+
+        /* 设置表的样式 */
+        .clock {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            margin-top: 100px;
+            border-radius: 50%;
+            /* border: 10px solid burlywood; */
+            position: relative;
+            background-image: url(img/meng.jpg);
+            background-size: cover;
+        }
+
+        .clock > div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        /* 设置时针 */
+        .hour-wrapper{
+            height: 70%;
+            width: 70%;
+            animation: run 43200s infinite linear;
+        }
+        .hour{
+            height: 50%;
+            width: 6px;
+            background-color: rgb(165, 50, 66);
+            margin: 0 auto;
+        }
+        /* 设置分针 */
+        .minute-wrapper{
+            height: 80%;
+            width: 80%;
+            animation: run 3600s infinite linear;
+        }
+        .minute{
+            height: 50%;
+            width: 6px;
+            background-color: rgb(37, 127, 168);
+            margin: 0 auto;
+        }
+        /* 设置时针 */
+        .second-wrapper{
+            height: 90%;
+            width: 90%;
+            animation: run 60s infinite linear;
+        }
+        .second{
+            height: 50%;
+            width: 6px;
+            background-color: rgb(161, 182, 46);
+            margin: 0 auto ;
+        } 
+        
+        @keyframes run {
+            from {
+                transform: rotateZ(0deg);
+            }
+
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="sec-wrapper">
+        <div class="sec"></div>
+    </div> -->
+
+    <!-- 创建表的容器 -->
+    <div class="clock">
+        <!-- 创建时针 -->
+        <div class="hour-wrapper">
+            <div class="hour"></div>
+        </div>
+        <!-- 创建分针 -->
+        <div class="minute-wrapper">
+            <div class="minute"></div>
+        </div>
+        <!-- 创建秒针 -->
+        <div class="second-wrapper">
+            <div class="second"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

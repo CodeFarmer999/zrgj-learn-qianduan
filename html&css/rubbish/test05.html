@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: -moz-box;
+            display: -webkit-box;
+            display: box;
+        }
+        #left{
+            width: 200px;
+            padding: 10px;
+            background-color: tomato;
+        }
+        #contents{
+            -moz-box-flex: 1;
+            -webkit-box-flex: 1;
+            width: 650px;
+            padding: 10px;
+            background-color: yellow;
+        }
+        #right{
+            width: 150px;
+            padding: 10px;
+            background-color: limegreen;
+        }
+        #left,#contents,#right{
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+        <div id="container">
+                <div id="left">
+                    <h2>左侧边栏</h2>
+                    <ul>
+                        <li>
+                            <a href="">超链接</a>
+                            
+                        </li>
+                        ......
+                        <li>
+                        <a href="">超链接</a>
+                        </li>
+                    </ul>
+                </div>
+            <div id="contents">
+                <h2>中间栏目</h2>
+                <hr>
+                <p>
+                    <img src="img/pic11.png" alt="" align="left">
+                    栏目内容......栏目内容
+                </p>
+            </div>
+            <div id="right">
+                <h2>右侧边栏</h2>
+                <hr>
+                <ul>
+                    <li>
+                        <a href="">超链接</a>
+                    </li>
+                    ......
+                    <li>
+                    <a href="">超链接</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+</body>
+</html>

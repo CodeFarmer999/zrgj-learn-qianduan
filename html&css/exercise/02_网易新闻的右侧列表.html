@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易新闻右侧列表</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        /* body {
+            background-color: #bfa;
+        } */
+
+        a {
+            /* 去除超链接下划线 */
+            text-decoration: none;
+        }
+
+        .news-img img {
+            width: 230px;
+            height: 200px;
+        }
+
+        /* 设置容器的样式 */
+        .news-wrapper {
+            /* 设置宽度 */
+            width: 235px;
+            /* 设置高度 */
+            height: 350px;
+            /* 设置背景颜色,显示轮廓 */
+            background-color: #fff;
+            /* 设置居中 */
+            margin: 50px auto;
+            /* 设置上边框 */
+            border-top: 1px solid #ddd;
+        }
+
+        /* 设置news-title */
+        .news-title {
+            /* 为了边框和文字宽度一致，需要将h2转换为行内块元素 */
+            display: inline-block;
+            /* 设置高度 */
+            height: 20px;
+            /* 设置上边框 */
+            border-top: 1px red solid;
+            /* 通过margin-top将h2上移，盖住上边框 */
+            margin-top: -1px;
+            /*  */
+            padding-top: 10px;
+        }
+
+        /* 设置title中超链接的样式 */
+        .news-wrapper .news-title a {
+            /* 去除下划线 */
+            text-decoration: none;
+            /* 设置颜色 */
+            color: #40406B;
+            /* 设置文字的加粗效果 */
+            font-weight: bold;
+        }
+
+        /* 设置图片容器的高度 */
+        .news-img {
+            height: 200px;
+        }
+
+        /* 设置图片的文字效果 */
+        .news-img .img-title {
+            /* 设置字体颜色 */
+            color: #fff;
+            /* 向上移动文字 */
+            margin-top: -20px;
+            /* 设置加粗 */
+            /* 设置padding */
+            padding-left: 15px;
+        }
+        /* 设置新闻列表 */
+        .news-list{
+            /* 设置上外边距 */
+            margin-top: 15px;
+            /* 设置左侧的padding */
+            padding-left: 1px;
+            /* 设置项目符号 */
+            /* list-style: square; */
+        }
+        /* 设置鼠标移入超链接的样式*/
+        .news-list li a:hover{
+            color: red;
+        }
+        /* 设置li */
+        .news-list li{
+            /* 设置下外边距 */
+            margin-bottom: 12px;
+        }
+        /* 设置li中文字 */
+        .news-list li a{
+            /* 设置字体大小 */
+            font-size: 12px;
+            /* 设置字体颜色 */
+            color: #666;
+        }
+        /* 通过before伪元素，来为每一个li添加项目符号 */
+        .news-list li::before{
+             content: '✔';
+             color: tomato;
+             font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 创建新闻列表的外侧的容器 -->
+    <div class="news-wrapper">
+        <!-- 创建一个标题标签 -->
+        <h2 class="news-title">
+            <a href="#">体育</a>
+        </h2>
+        <!-- 创建一个图片的容器 -->
+        <div class="news-img">
+            <a href="#">
+                <img src="img/02/01.webp" alt="坦克">
+                <!-- 创建图片标题 -->
+                <h3 class="img-title">
+                    费德勒首负迪米 扶额摇头不满发挥
+                </h3>
+            </a>
+        </div>
+        <!-- 新闻列表 -->
+        <ul class="news-list">
+            <li>
+                <a href="#">国产民用渡轮装了一肚子坦克装甲车</a>
+            </li>
+            <li>
+                <a href="#">俄罗斯S-70"猎人"重型无人机高清图来了</a>
+            </li>
+            <li>
+                <a href="#">民航局出手了！今起暂停！</a>
+            </li>
+            <li>
+                <a href="#">民航淡季提前坐飞机有大变化！</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

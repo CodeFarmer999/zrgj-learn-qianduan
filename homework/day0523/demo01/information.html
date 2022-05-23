@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>个人信息表</title>
+        <style>
+            * {
+                margin: 0 auto;
+                text-align: center;
+                margin-top: 20px;
+            }
+            
+            .outer {
+                width: 600px;
+                height: 500px;
+                border: 1px solid grey;
+                margin: 0 auto;
+            }
+            
+            input {
+                text-align: left;
+            }
+            
+            .inner {
+                margin: 10px;
+            }
+            
+            button {
+                background-color: #6495ed;
+                color: #f6edf9;
+                height: 40px;
+                width: 100px;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outer">
+            <form action="#" class="inner">
+                <h2>个人信息表</h2>
+                
+                <label>
+                    姓名:
+                    <input type="text" placeholder="请输入姓名" style="margin-top: 30px;">
+                </label>
+                <br>
+                
+                <label>
+                    年龄:
+                    <input type="text" placeholder="请输入年龄">
+                </label>
+                <br>
+                
+                <label for="blood">血型:</label>
+                <select name="blood" id="blood">
+                    <option value="0">请选择</option>
+                    <option value="1">O</option>
+                    <option value="2">A</option>
+                    <option value="3">B</option>
+                </select>
+                <br>
+                
+                <label for="1">爱好:</label>
+                <input type="checkbox" name="hobbies" id="1"> 跑步
+                <input type="checkbox" name="hobbies" id="2"> 游泳
+                <input type="checkbox" name="hobbies" id="3"> 篮球
+                <br>
+                
+                学历: 
+                <input type="radio" name="education" id="4"> 大专
+                <input type="radio" name="education" id="5"> 本科
+                <input type="radio" name="education" id="6"> 博士
+                <br>
+                <br>
+                
+                <span style="font-size: 20px; font-family: Arial,serif">自我评价</span>
+                <textarea name="evaluation" id="" cols="40" rows="3" placeholder="自我评价..." style="text-align: left;"></textarea>
+                <br>
+                
+                附件: <input type="file" name="file">
+                <br>
+                
+                填表日期: <input type="text" placeholder="年/月/日">
+                <br>
+                
+                <button type="submit">提交</button>
+                
+            </form>
+        </div>
+    </body>
+</html>

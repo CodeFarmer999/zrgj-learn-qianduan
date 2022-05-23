@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        audio 标签用来向页面中引入一个外部的音频文件的
+            音视频文件引入时，默认情况下不允许用户自己控制播放停止
+        属性：
+            controls 是否允许用户控制播放
+            autoplay 音频文件自动播放
+                -如果设置了autoplay则音乐会在打开页面时会自动播放
+                    但是目前来讲大部分浏览器都不会自动对音乐进行自动播放
+            loop 音乐是否循环播放
+     -->
+    <!-- <audio src="source/audio.mp3" controls autoplay loop></audio> -->
+    <!-- 
+        除了通过src来指定外部文件的路径以外，还可以通过source来指定文件路径
+        以下方法更为严谨，主要是防止ie8及以下等不支持音频的浏览器
+     -->
+    <!-- <audio controls>
+        <!-- 对不起，您的浏览器不支持播放音频！请升级浏览器！ -->
+    <source src="source/audio.mp3">
+    <source src="source/audio.ogg">
+    <embed src="source/audio.mp3" type="audio/mp3" width="300" height="100">
+    </audio> -->
+    <!-- 
+         主要为了兼容ie8及以下的浏览器
+         最“不要脸”的播放音频的方式，强制使用系统播放器进行播放
+         特别缺德
+      -->
+    <!-- <embed src="source/audio.mp3" type="audio/mp3" width="300" height="100"> -->
+
+    <!-- 
+        使用video标签来向网页中引入一个视频
+            -使用方式和audio基本一样
+      -->
+    <!-- <video src="source/flower.mp4"></video> -->
+      <video controls>
+          <source src="source/flower.webm">
+          <embed src="source/flower.webm" type="video/mp4">
+      </video>
+      <iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=d0040cqqgtz" allowFullScreen="true" height="500" width="500"></iframe>
+</body>
+
+</html>

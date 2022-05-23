@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 300px;
+            width: 300px;
+            bottom: 1px solid #bfa;
+            margin: 150px auto;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate 3s infinite linear;
+            transform: rotateX(45deg) rotateZ(45deg);
+        }
+
+        .box-page {
+            width: 300px;
+            height: 300px;
+            opacity: 0.7;
+            position: absolute;
+            transform-style: preserve-3d;
+        }
+
+        .top {
+            /* background-color: red; */
+            /* background-image: url(img/a0.jpg); */
+            transform: rotateY(90deg) translateZ(150px);
+        }
+
+        .bottom {
+            /* background-color: tomato; */
+            /* background-image: url(img/a1.jpg); */
+            transform: rotateY(-90deg) translateZ(150px);
+        }
+
+        .left {
+            /* background-color: blue; */
+            /* background-image: url(img/a2.jpg); */
+            transform: rotateX(90deg) translateZ(150px);
+        }
+
+        .right {
+            /* background-color: pink; */
+            /* background-image: url(img/a3.jpg); */
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+
+        .before {
+            /* background-color: yellow; */
+            /* background-image: url(img/a4.jpg); */
+            transform: rotateY(0deg) translateZ(150px);
+        }
+
+        .after {
+            /* background-color: purple; */
+            /* background-image: url(img/a5.jpg); */
+            transform: rotateY(180deg) translateZ(150px);
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateX(0) rotateZ(0);
+            }
+
+            100% {
+                transform: rotateX(1turn) rotateZ(1turn);
+            }
+        }
+
+        @keyframes al {
+            0%{
+                transform: translateY(0) translateZ(0) scale(1) rotateZ(0deg);
+            }
+
+            20%{
+                transform: translateY(300px) translateZ(300px) scale(0) rotateZ(720deg);
+            }
+
+            90%{
+                transform: translateZ(300px) scale(0) rotateZ(720deg);
+            }
+
+            100%{
+                transform: translateZ(0) scale(1) rotateZ(0deg);
+            }
+        }
+
+        .box-page div:nth-child(1){
+            animation: al 6s ease-in;
+        }
+        .box-page div:nth-child(2){
+            animation: al 6s ease-in 0.5s;
+        }
+        .box-page div:nth-child(3){
+            animation: al 6s ease-in 1s;
+        }
+        .box-page div:nth-child(4){
+            animation: al 6s ease-in 1.5s;
+        }
+        .box-page div:nth-child(5){
+            animation: al 6s ease-in 2s;
+        }
+        .box-page div:nth-child(6){
+            animation: al 6s ease-in 2.5s;
+        }
+        .box-page div:nth-child(7){
+            animation: al 6s ease-in 3s;
+        }
+        .box-page div:nth-child(8){
+            animation: al 6s ease-in 3.5s;
+        }
+        .box-page div:nth-child(9){
+            animation: al 6s ease-in 4s;
+        }
+    </style>
+     
+    
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="box-page top"></div>
+            <div class="box-page bottom"></div>
+            <div class="box-page left"></div>
+            <div class="box-page right"></div>
+            <div class="box-page before"></div>
+            <div class="box-page after"></div>
+        </div>
+    </div>
+    <script>
+        var arr = document.querySelectorAll(".box-page");
+        for (var n = 0; n < arr.length; n++) {
+            for (var r = 0; r < 3; r++) {
+                for (var c = 0; c < 3; c++) {
+                    var divs = document.createElement("div");
+                    divs.style.cssText = "width:100px;height:100px;border:2px solid #fff;box-sizing:border-box;position:absolute;background-image:url(img/a"+ n +".jpg);background-size:300px 300px;";
+                    arr[n].appendChild(divs);
+                    divs.style.left=c*100+"px";
+                    divs.style.top=r*100+"px";
+                    divs.style.backgroundPositionX = -c*100 + "px";
+                    divs.style.backgroundPositionY = -r*100 + "px";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
