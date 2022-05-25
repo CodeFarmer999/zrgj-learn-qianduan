@@ -575,6 +575,7 @@ ul .left-menu li .detail .des-content:hover {
   bottom: 22px;
   right: 35px;
 }
+/*设置导航点具体样式*/
 .pointer a {
   float: left;
   width: 6px;

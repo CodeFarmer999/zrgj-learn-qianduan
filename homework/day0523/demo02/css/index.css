@@ -1,5 +1,7 @@
 /* 主页index.html的样式表 */
-
+body {
+  height: 100%;
+}
 /* 顶部导航条的容器 */
 .topbar-wrapper {
   /* 设置宽度全屏 */
@@ -726,4 +728,184 @@ ul .left-menu li .detail .des-content:hover {
   color: #000;
   font-size: 14px;
   margin-top: 5px;
+}
+
+/* 设置下部的广告的区域 */
+.ad {
+  height: 170px;
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ad .shortcut,
+.ad .imgs,
+.ad li {
+  float: left;
+}
+
+/* 设置左侧快捷方式 */
+.ad .shortcut {
+  width: 228px;
+  height: 168px;
+  background-color: #5f5750;
+  margin-right: 14px;
+  padding-top: 2px;
+  padding-left: 6px;
+}
+/* 设置快捷方式中的超链接 */
+.ad .shortcut a {
+  display: block;
+  color: #cfccca;
+  height: 84px;
+  width: 76px;
+  text-align: center;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.ad .shortcut a:hover {
+  color: #fff;
+}
+
+.ad .shortcut li {
+  position: relative;
+}
+
+/* 设置上边框 */
+.ad .shortcut li::before {
+  content: "";
+  position: absolute;
+  width: 64px;
+  height: 1px;
+  background-color: #665e57;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+}
+
+/* 设置左边框 */
+.ad .shortcut li::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 70px;
+  background-color: #665e57;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 0;
+}
+/* 设置图标字体 */
+.ad .shortcut i {
+  margin-top: 20px;
+  display: block;
+  font-size: 20px;
+}
+/* 设置左侧的图片 */
+.ad .imgs li {
+  width: 316px;
+  margin-right: 15px;
+  transition: all .3s;
+}
+
+.ad .imgs li:hover{
+  transform: translatey(-4px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+}
+
+.ad .imgs li:last-child {
+  margin: 0;
+}
+/* 设置图片大小及位置 */
+.ad .imgs img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.middle-line {
+  margin-top: 30px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, .3);
+}
+
+.middle-title {
+  height: 80px;
+  line-height: 80px;
+}
+
+.middle-title .inner-sp {
+  float: left;
+  color: #6b3333;
+}
+
+
+.middle-title .inner-a{
+  float: right;
+  font-size: 18px;
+  color: #424242;
+}
+
+.middle-title .inner-a > a:hover {
+  color: #ff6700;
+}
+
+.middle-down-ad {
+  /*background-color: #bfa;*/
+  position: relative;
+  height: 616px;
+}
+
+.middle-down-ad-left {
+  position: absolute;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, .1);
+  transition: all .3s;
+}
+
+.middle-down-ad-left:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+}
+
+.middle-down-ad-right {
+  position: absolute;
+  left: 284px;
+}
+
+.middle-down-ad-right ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.middle-down-ad-right .title {
+  margin: 0 10px 2px;
+  margin-right: 0px;
+}
+
+.middle-down-ad-right .desc {
+  height: 18px;
+  width: 120px;
+  margin-left: 40px;
+  margin-top: 3px;
+  font-size: 10px;
+  color: #b0b0b0;
+}
+
+.middle-down-ad-right li {
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, .1);
+  width: 200px;
+  height: 300px;
+  margin-right: 10px;
+  margin-left: 25px;
+  margin-top: 10px;
+  border-radius: 3px;
+  text-align: center;
+  transition: all .3s;
+}
+
+.middle-down-ad-right li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, .6);
 }
