@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            class postman {
+                constructor(id, name, salary) {
+                    this.id = id;
+                    this.name = name;
+                    this.salary = salary;
+                }
+                
+                showInfo() {
+                    console.log(`ID: ${this.id}, 姓名: ${this.name}, 薪资: ${this.salary}`);
+                }
+            }
+            
+            let p1 = new postman(1, 'turing', 9999);
+            let p2 = new postman(2, 'cherry', 8888);
+            p1.showInfo();
+            p2.showInfo();
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

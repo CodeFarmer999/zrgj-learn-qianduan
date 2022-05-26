@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            let str = 'abaasdffggghhjjkkgfddsssss3444343';
+
+            // 字符串长度
+            console.log('字符串的长度为:', str.length);
+            
+            // 找出指定位置的字符
+            console.log('第6个字符为:', str[5]);
+            
+            // 查找指定字符在字符串中是否存在
+            let pos = str.indexOf('s');
+            console.log('字符串中是否存在s:', pos !== -1);
+            
+            // 替换指定的字符
+            str = str.replace('s', '22');
+            
+            // 截取指定开始位置到结束位置的字符串
+            console.log('截取5到10位置的字符串:', str.substring(5, 10));
+            
+            // 找出以上字符串中出现次数最多的字符和出现的次数
+            let maxChar = '';
+            let max = 0;
+            for (let i = 0; i < str.length; i++) {
+                let char = str[i];
+                let count = 0;
+                for (let j = 0; j < str.length; j++) {
+                    if (str[j] === char) {
+                        count++;
+                    }
+                }
+                if (count > max) {
+                    max = count;
+                    maxChar = char;
+                }
+            }
+
+            console.log('出现次数最多的字符为:', maxChar, ', 出现的次数为:', max);
+            
+            // 遍历字符串，并将遍历出的字符两头添加符号“@”
+            let newStr = '';
+            for (let i = 0; i < str.length; i++) {
+                newStr += '@' + str[i] + '@';
+            }
+
+            console.log('新字符串为:', newStr);
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

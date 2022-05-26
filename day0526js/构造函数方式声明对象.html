@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            const student = {};
+            student.name = '张三';
+            student.age = 21;
+            student.show = function () {
+                console.log('姓名:', this.name, ',年龄:', this.age)
+            }
+            
+            console.log(student.name)
+            student.show();
+            
+            // 调用obj的原型函数
+            console.log(student.hasOwnProperty('gender'))
+            console.log(student.valueOf())
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

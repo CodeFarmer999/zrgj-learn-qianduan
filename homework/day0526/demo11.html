@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            window.money = 100;
+            function ATM() {
+                let flag = true;
+                while (flag) {
+                    let choice = parseInt(prompt('请输入您要的操作:\n1.存钱\n2.取钱\n3.显示余额\n4.退出'));
+                    switch (choice) {
+                        case 1:
+                            window.money += parseInt(prompt("请输入存入的金额:"))
+                            alert("存入成功！");
+                            ATM();
+                            break;
+                        case 2:
+                            window.money -= parseInt(prompt("请输入取出的金额:"))
+                            alert("取出成功！")
+                            ATM();
+                            break;
+                        case 3:
+                            alert("您的余额为:" + window.money)
+                            ATM();
+                            break;
+                        case 4:
+                            flag = false;
+                            break;
+                        default:
+                            ATM();
+                    }
+                }
+            }
+            
+            ATM();
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

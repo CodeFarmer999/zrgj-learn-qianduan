@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            class category {
+                constructor(id, name, price) {
+                    this.id = id;
+                    this.name = name;
+                    this.price = price;
+                }
+                
+                showInfo() {
+                    console.log(`商品ID: ${this.id}, 商品名称: ${this.name}, 商品价格: ${this.price} 元`);
+                }
+            }
+            
+            let c1 = new category(1, '苹果', 3);
+            let c2 = new category(2, '香蕉', 2);
+            
+            c1.showInfo();
+            c2.showInfo();
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

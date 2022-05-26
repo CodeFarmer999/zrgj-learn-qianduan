@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            class phone {
+                constructor(brand, price, color) {
+                    this.brand = brand;
+                    this.price = price;
+                    this.color = color;
+                }
+                
+                listenMusic(songName) {
+                    console.log(`正在使用${this.brand}品牌手机播放 ${songName} 歌曲。`);
+                    this.showInfo();
+                }
+                
+                showInfo() {
+                    console.log(`品牌：${this.brand}，价格：${this.price}，颜色：${this.color}`);
+                }
+            }
+            
+            let p1 = new phone('小米', 6666, '紫色');
+            p1.listenMusic('爱你');
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
