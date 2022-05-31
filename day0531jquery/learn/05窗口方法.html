@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            function del(id) {
+                // 确认框 true:确认  false: 取消
+                if (confirm('确定要删除' + id + '吗?')) {
+                    alert('成功删除id为' + id + '的记录')
+                } else {
+                    alert('不删除')
+                }
+            }
+            
+            function ins() {
+                const result = prompt('请输入您的姓名:', '张三丰');
+                alert('您输入的内容为' + result)
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="del(666)">删除</button>
+        
+        <button onclick="ins()">点我输入信息</button>
+    </body>
+</html>

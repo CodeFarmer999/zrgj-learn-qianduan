@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            function update() {
+                // alert('update().id = ' + id)
+                location.href = './update.html'
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>操作</th>
+            </tr>
+            
+            <tr>
+                <td>1</td>
+                <td>张三</td>
+                <td>21</td>
+                <td>
+                    <button onclick="update(1)">修改</button>
+                </td>
+            </tr>
+        </table>    
+    </body>
+</html>

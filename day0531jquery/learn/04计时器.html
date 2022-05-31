@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            let a = 0;
+            let m = null;
+            
+            function start() {
+                m = setInterval(() => {
+                    document.getElementById('watch').innerText = (a++).toLocaleString() + '秒'
+                }, 1000)
+            }
+            
+            function end() {
+                clearInterval(m);
+                m = null;
+            }
+        </script>
+    </head>
+    <body>
+        <span id="watch">准备好⏲了吗</span>
+        <br>
+        <button onclick="start()">开始</button>
+        <button onclick="end()">结束</button>
+    </body>
+</html>
