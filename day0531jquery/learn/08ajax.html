@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            function test() {
+                // 1.创建XMLHttpRequest对象
+                const xmlHttpRequest = new XMLHttpRequest();
+                // 2.设置回调
+                xmlHttpRequest.onreadystatechange = () => {
+                    // console.log(xmlHttpRequest.status)
+                    // console.log(xmlHttpRequest.readyState)
+    
+                    if (xmlHttpRequest.status === 200 && xmlHttpRequest.readyState === 4) {
+                        console.log(xmlHttpRequest.responseText)
+                    }
+                }
+                
+                // 3.调用open方法，对服务器调用
+                xmlHttpRequest.open("GET", "user.json");
+                // 4.调用send方法发送请求
+                xmlHttpRequest.send(null);
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="test()">点我</button>
+    </body>
+</html>
