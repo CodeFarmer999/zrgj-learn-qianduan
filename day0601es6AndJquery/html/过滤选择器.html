@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>过滤选择器</title>
+        <script src="../js/jquery-1.9.1.js"></script>
+        <script>
+            function dian1() {
+                $("li:first").css("background", "red");
+            }
+            
+            function dian2() {
+                $("li:last").css("background", "green");
+            }
+            
+            function dian3() {
+                $("li:not(:last)").css("background", "yellow");
+            }
+            
+            function dian4() {
+                $("li:even").css("background", "lightskyblue");
+            }
+            
+            function dian7() {
+                $("li:odd").css("background", "mediumspringgreen");
+            }
+            
+            function dian5() {
+                $("li:eq(1)").css("background", "violet");
+            }
+            
+            function dian6() {
+                $(":header").css("background", "lightpink");
+            }
+            
+            function dian8() {
+                $("li:gt(2)").css("background", "mediumslateblue");
+            }
+            
+            function dian9() {
+                $("li:lt(5)").css("background", "palevioletred");
+            }
+        </script>
+    </head>
+    <body>
+        <ul>
+            <li>我是li1</li>
+            <li>我是li2</li>
+            <li>我是li3</li>
+            <li>我是li4</li>
+            <li>我是li5</li>
+            <li>我是li6</li>
+        </ul>
+        
+        <h1>我是h1</h1>
+        <h2>我是h2</h2>
+        <h3>我是h3</h3>
+        <h4>我是h4</h4>
+        <h5>我是h5</h5>
+        <h6>我是h6</h6>
+        
+        <input type="button" value="选中第一个li" onclick="dian1()"><br><br>
+        <input type="button" value="选中最后一个li" onclick="dian2()"><br><br>
+        <input type="button" value="选中:not的li" onclick="dian3()"><br><br>
+        <input type="button" value="选中索引为偶数的li" onclick="dian4()"><br><br>
+        <input type="button" value="选中索引为奇数的li" onclick="dian7()"><br><br>
+        <input type="button" value="选中指定索引值的li" onclick="dian5()"><br><br>
+        <input type="button" value="选中h1~h6" onclick="dian6()"><br><br>
+        <input type="button" value="选中索引大于2的li" onclick="dian8()"><br><br>
+        <input type="button" value="选中索引小于5的li" onclick="dian9()"><br><br>
+    </body>
+</html>

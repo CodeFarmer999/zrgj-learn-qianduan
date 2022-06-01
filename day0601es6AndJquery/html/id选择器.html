@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>id选择器</title>
+        <!--引入jquery的库-->
+        <script src="../js/jquery-1.9.1.js"></script>
+        <script>
+            function dian() {
+                // 通过id选择器获取div对象, 设置背景颜色, css函数给jQuery对象设置或者获取样式
+                $('#myDiv').css('background', 'red');
+            }
+        </script>
+    </head>
+    <body>
+        <div id="myDiv">我是div</div>
+        <input type="button" value="点我" onclick="dian()">
+    </body>
+</html>

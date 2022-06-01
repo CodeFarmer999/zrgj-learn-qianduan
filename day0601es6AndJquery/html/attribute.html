@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>attribute</title>
+        <!--引入jquery的库-->
+        <script src="../js/jquery-1.9.1.js"></script>
+        <script>
+            function dian() {
+                // 选择div，有id属性的元素
+                $('div[id]').css('background', 'skyblue');
+            }
+        </script>
+    </head>
+    <body>
+        <div id>我是div1</div>
+        <div id="abc">我是div2</div>
+        <input type="button" value="点dian(标签)" onclick="dian()"><br>
+    </body>
+</html>

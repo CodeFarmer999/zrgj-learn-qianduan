@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>dom对象转jquery对象</title>
+        <!--引入jquery的库-->
+        <script src="../js/jquery-1.9.1.js"></script>
+        <script>
+            // 原生的dom操作
+            function dian1() {
+                // 获取到div的dom对象
+                let myDiv = document.getElementById('myDiv');
+                // div对象设置html内容
+                myDiv.innerHTML = '我是div里的内容'
+            }
+            
+            // 把dom对象转化为jQuery对象
+            function dian2() {
+                // 得到div的dom对象
+                let myDiv = document.getElementById('myDiv');
+                // 把dom对象转换为jQuery对象
+                let $myDiv = $(myDiv);
+                // 赋值 jQuery对象的html函数设置html内容
+                $myDiv.html('我是通过jQuery对象赋值的')
+            }
+        </script>
+    </head>
+    <body>
+        <div id="myDiv"></div>
+        <input type="button" value="点我" onclick="dian1()">
+        <input type="button" value="点我" onclick="dian2()">
+    </body>
+</html>

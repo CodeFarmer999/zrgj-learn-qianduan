@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            // 1.声明json对象
+            const person = {"username": "硕硕", "password": "123456"};
+            console.log(person)
+            // 2.将json对象转换为字符串
+            const personStr = JSON.stringify(person);
+            // 3.输出json串
+            console.log(personStr)
+            
+            // 4.将json字符串转为json对象 
+            const personPar = JSON.parse(personStr);
+            // 5.输出json对象
+            console.log(personPar)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            * {
+                text-align: center;
+                margin: 20px auto 0;
+            }
+            #pic {
+                display: none;
+            }
+            
+            #pic img {
+                margin-top: 20px;
+                height: 300px;
+                width: 300px;
+            }
+        </style>
+        <script>
+            function appear() {
+                document.getElementById('pic').style.display = 'block';
+            }
+            
+            function disappear() {
+                document.getElementById('pic').style.display = 'none';
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="appear()">图片出现</button>    
+        <button onclick="disappear()">图片消失</button> 
+        <div id="pic">
+            <img src="./hill-lake.jpg" alt="">
+        </div>
+    </body>
+</html>

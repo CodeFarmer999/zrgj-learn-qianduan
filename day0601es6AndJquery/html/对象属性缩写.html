@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>对象属性缩写</title>
+        <script>
+            const name = '硕硕'
+            const age = 21
+            const city = '沧州'
+            const student = {
+                name,
+                age,
+                city,
+                show() {
+                    console.log('student的show函数')
+                }
+            }
+            // 调用
+            console.dir(student)
+            student.show()
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

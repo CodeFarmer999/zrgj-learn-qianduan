@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            // 箭头函数
+            let sum = (num1, num2) => {
+                return num1 + num2;
+            }
+            
+            // 当要执行的代码块只有一条return语句时，可省略大括号和return关键字
+            let sums = (num1, num2) => num1 + num2;
+            
+            // 只有一个参数的话，小括号可以省略
+            let sum2 = x => x + x;
+            
+            // 如果没有参数，那么直接使用括号
+            let sum3 = () => 50 + 50;
+            
+            console.log(sum(2, 3));
+            console.log(sums(4, 6))
+            console.log(sum2(1))
+            console.log(sum3())
+            
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

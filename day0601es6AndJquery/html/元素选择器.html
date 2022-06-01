@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>元素选择器</title>
+        <!--引入jquery的库-->
+        <script src="../js/jquery-1.9.1.js"></script>
+        <script>
+            function dian() {
+                $('div').css('background', 'yellow');
+                $('span').css('background', 'salmon');
+                $('p').css('background', 'skyblue');
+            }
+        </script>
+    </head>
+    <body>
+        <div>我是div1</div>
+        <div>我是div2</div>
+        <div>我是div3</div>
+        <span>我是span</span>
+        <p>我是p</p>
+        <input type="button" value="点我" onclick="dian()">
+    </body>
+</html>

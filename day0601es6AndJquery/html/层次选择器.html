@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>层次选择器</title>
+        <!--引入jquery的库-->
+        <script src="../js/jquery-1.9.1.js"></script>
+        <script>
+            function dian1() {
+                $("form input").css("background", "red");
+            }
+            
+            function dian2() {
+                $("form > input").css("background", "green");
+            }
+            
+            function dian3() {
+                $("label + input").css("background", "yellow");
+            }
+            
+            function dian4() {
+                $("label ~ input").css("background", "blue");
+            }
+        </script>
+    
+    </head>
+    <body>
+        <form>
+            <input name="xyz" value="xyz">
+            <label>Name:</label>
+            <input value="name" name="name">
+            <input value="abc" name="abc">
+            <fieldset>
+                <label>News:</label>
+                <input value="news" name="news">
+            </fieldset>
+        </form>
+        <input name="none" value="none">
+        <br><br>
+        
+        <input type="button" value="form下子孙所有的input元素设置为红色" onclick="dian1()"><br><br>
+        <input type="button" value="form下直接子元素的input元素设置为绿色" onclick="dian2()"><br><br>
+        <input type="button" value="label后面的相邻元素的input元素设置为黄色" onclick="dian3()"><br><br>
+        <input type="button" value="label后面的兄弟元素的input元素设置为蓝色" onclick="dian4()"><br><br>
+    
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>通配符选择器</title>
+        <!--引入jquery的库-->
+        <script src="../js/jquery-1.9.1.js"></script>
+        <script>
+            function dian() {
+                $('*').css('background-color', 'skyblue');
+            }
+        </script>
+    </head>
+    <body>
+        <div class="myDiv">我是div</div>
+        <p class="myDiv">我是p标签</p>
+        <span>我是span标签</span><br>
+        <input type="button" value="点我" onclick="dian()">
+    </body>
+</html>

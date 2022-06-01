@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>合并选择器</title>
+        <!--引入jquery的库-->
+        <script src="../js/jquery-1.9.1.js"></script>
+        <script>
+            function dian() {
+                $("div.myDiv1,p,span").css("background", "darkorchid");
+            }
+        </script>
+    </head>
+    <body>
+        <div class="myDiv1">我是div1</div>
+        <p>我是p标签</p>
+        <span>我是span</span>
+        <div id="myDiv2">我是div2</div>
+        <input type="text" class="myDiv">
+        <input type="button" value="点我" onclick="dian()">
+    </body>
+</html>
